@@ -62,13 +62,11 @@ namespace HunterPlaformer {
 
             if (!isGrounded)
             {
-                if ((heroRigidbody.velocity.x > maxMoveSpeed & movingX > 0) |
-                (heroRigidbody.velocity.x < -maxMoveSpeed & movingX < 0))
-                {
+               speedMultiplier = 0.3f;
+
+                if ((heroRigidbody.velocity.x > maxMoveSpeed && movingX > 0) ||
+                    heroRigidbody.velocity.x < -maxMoveSpeed && movingX < 0) {
                     speedMultiplier = 0f;
-                }
-                else {
-                    speedMultiplier = 0.3f;
                 }
             }
 
